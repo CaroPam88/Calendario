@@ -88,18 +88,18 @@ lista.addEventListener('click', function(event){
     localStorage.setItem("TODO", JSON.stringify(LIST))
 })
 
-// let data = localStorage.getItem("TODO")
-// if(data){
-//     LIST=JSON.parse(data)
-//     id= LIST.length
-//     cargarLista(LIST)
-// }else{
-//     LIST=[]
-//     id=0
-// }
-// function cargarLista(DATA){
-//     DATA.forEach(function(i){
-//         agregarTarea(i.nombre, i.id, id.realizado, i.eliminado)
-//     })
-// }
+let data = localStorage.getItem("TODO")
+if(data){
+    LIST=JSON.parse(data)
+    id= LIST.length
+    cargarLista(LIST)
+}else{
+    LIST=[]
+    id=0
+}
+function cargarLista(DATA){
+    DATA.forEach(function(i){
+        agregarTarea(i.nombre, i.id, id.realizado, i.eliminado)
+    })
+}
 
